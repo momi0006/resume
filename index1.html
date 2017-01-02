@@ -1,121 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title></title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	 <!-- Chrome & Firefox OS -->
-    <meta name="theme-color" content="#132584">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#132584">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#132584">
+	<!-- Chrome & Firefox OS -->
+	<meta name="theme-color" content="#132584">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#132584">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#132584">
 	<meta name="description" content="Alif Momin Resume Website">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<title>Alif Momin</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-	
-	
+  
 	<link rel="stylesheet" type="text/css" href="css/styles1.css">
-
 	<script type="text/javascript">
-		
-		function openNav() {
-		    document.getElementById("myNav").style.width = "100%";
-		}
+    
+	    function openNav() {
+	        document.getElementById("myNav").style.width = "100%";
+	    }
 
-		function closeNav() {
-		    document.getElementById("myNav").style.width = "0%";
-		}
+	    function closeNav() {
+	        document.getElementById("myNav").style.width = "0%";
+	    }
 	</script>
 </head>
 <body>
 	<div class="container-fluid">
-		<div class="parallax-group">
-			<img src="img/main-image.jpg" id="indexImage" class="back">
-		</div>
-		<div>
-			<nav class="navbar navi">
-			<!-- <button class="navbar-toggler hidden-lg-up" type="button"  data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button> -->
-				<div class="collapse navbar-toggleable-md" id="navbarResponsive">
-					<ul class="nav navbar-nav float-xs-right">
-						<li class="nav-item active">
-						  <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-						  <a class="nav-link" href="#">ABOUT</a>
-						</li>
-						<li class="nav-item">
-						  <a class="nav-link" href="#">RESUME</a>
-						</li>
-						<li class="nav-item">
-						  <a class="nav-link" href="#">CONTACT</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
+		<div class="parallax">
+		    <div id="group1" class="parallax__group">
+		      <div class="parallax__layer parallax__layer--base">
+		      	<img src="img/main-image.jpg" id="indexImage">
+		      </div>
+		      <div class="parallax__layer parallax__layer--fore">
+		        
+		        <nav class="navbar navi">
+			        <!-- <button class="navbar-toggler hidden-lg-up" type="button"  data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button> -->
+			        <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+			          <ul class="nav navbar-nav float-xs-right">
+			            <li class="nav-item active">
+			              <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+			            </li>
+			            <li class="nav-item">
+			              <a class="nav-link" href="#">ABOUT</a>
+			            </li>
+			            <li class="nav-item">
+			              <a class="nav-link" href="#">RESUME</a>
+			            </li>
+			            <li class="nav-item">
+			              <a class="nav-link" href="#">CONTACT</a>
+			            </li>
+			          </ul>
+			        </div>
+			    </nav>
+			    <div id="myNav" class="overlay">
+			        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			        <div class="overlay-content">
+			          <a href="#">HOME</a>
+			          <a href="#">ABOUT</a>
+			          <a href="#">RESUME</a>
+			          <a href="#">CONTACT</a>
+			        </div>
+			      </div>
+			      <span style="" class="menuBtn hidden-lg-up" onclick="openNav()"><i class="material-icons">&#xE5D2;</i></span>
+			      <div class="vertical-center text-xs-center nameHeader">
+			        
+			        <div class="name">
+			          Alif Momin
+			        </div>
+			        <div class="subheadingName">
+			          Designer. Developer.
+			        </div>
 
-			<div id="myNav" class="overlay">
-		        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		        <div class="overlay-content">
-					<a href="#">HOME</a>
-					<a href="#">ABOUT</a>
-					<a href="#">RESUME</a>
-					<a href="#">CONTACT</a>
-		        </div>
-      		</div>
-			<span style="" class="menuBtn hidden-lg-up" onclick="openNav()"><i class="material-icons">&#xE5D2;</i></span>
-			<div class="text-xs-center nameHeader">
-        
-		        <div class="name">
-		          Alif Momin
-		        </div>
-		        <div class="subheadingName">
-		          Designer. Developer.
-		        </div>
-
+			      </div>
+		      </div>
 		    </div>
-			
+		    <div id="group2" class="parallax__group">
+		      <div class="parallax__layer parallax__layer--fore">
+		        <div class="">Base Layer</div>
+		      </div>
+		    </div>
 		</div>
-		<h3 class="front">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</h3>
 	</div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-aria.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-touch.min.js"></script>
-	<script type="text/javascript">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-touch.min.js"></script>
+    <script type="text/javascript">
 	    $(document).ready(function(){
-	    	/*$(".name").css("opacity", 0);
-      		$(".subheadingName").css("opacity", 0);*/
-	    	$("#indexImage").load(function(){
-	    		alert("hello");
-				$(".name").delay(800).animate({opacity: 1}, 1500, "linear").delay(50, function(){
-					$(".subheadingName").delay(150).animate({opacity: 1, top: '0px'}, 1000, "linear");
-				});
-				});
+	      $(".name").css("opacity", 0);
+	      $(".subheadingName").css("opacity", 0);
+	      
 	    });
-	    
-  	</script>
-</body>
 
+	    $("#indexImage").load(function(){
+	      $(".name").delay(800).animate({opacity: 1}, 1500, "linear").delay(50, function(){
+	        $(".subheadingName").delay(150).animate({opacity: 1, top: '0px'}, 1000, "");
+
+	      });
+	    });
+	</script>
+</body>
 </html>
