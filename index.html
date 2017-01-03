@@ -20,12 +20,13 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
   
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"> -->
+  
 
 
   <script type="text/javascript">
@@ -45,8 +46,8 @@
 </head>
 <body>
   <div class="container-fluid">
-    <div id="index-banner" class="parallax-container">
-      <nav class="navbar navi">
+    <div class="parallax-container">
+      <nav class="navi">
         <!-- <button class="navbar-toggler hidden-lg-up" type="button"  data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button> -->
         <div class="collapse navbar-toggleable-md" id="navbarResponsive">
           <ul class="nav navbar-nav float-xs-right">
@@ -65,7 +66,6 @@
           </ul>
         </div>
       </nav>
-
       <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
@@ -86,101 +86,39 @@
         </div>
 
       </div>
-      <div class="parallax"><img id="indexImage" src="img/main-image.jpg" alt="Unsplashed background img 1"></div>
+      <div class="parallax">
+        <img src="img/main-image2.jpg" id="indexImage">
+      </div>
     </div>
-
-    <section class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <h2 style="text-decoration: underline;">Summary:</h2>
-          hello
-        </div>
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header">Parallax</h2>
+        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
       </div>
-    </section>
-    <div id="index-banner" class="parallax-container">
-      <nav class="navbar navi">
-        <!-- <button class="navbar-toggler hidden-lg-up" type="button"  data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button> -->
-        <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-          <ul class="nav navbar-nav float-xs-right">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">ABOUT</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">RESUME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">CONTACT</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-          <a href="#">HOME</a>
-          <a href="#">ABOUT</a>
-          <a href="#">RESUME</a>
-          <a href="#">CONTACT</a>
-        </div>
-      </div>
-      <span style="" class="menuBtn hidden-lg-up" onclick="openNav()"><i class="material-icons">&#xE5D2;</i></span>
-      <div class="section no-pad-bot">
-        <div class="container">
-          <br><br>
-          <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
-          <div class="row center">
-            <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-          </div>
-          <br><br>
-
-        </div>
-      </div>
-      <div class="parallax"><img src="img/main-image1.jpg" alt="Unsplashed background img 1"></div>
     </div>
-
-    <h3>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      
-    </h3>
-
+    <div class="parallax-container">
+      <div class="parallax"><img src="img/main-image1.jpg"></div>
+    </div>
   </div>
+  <!-- Scripts -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-aria.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-touch.min.js"></script>
   <script type="text/javascript">
+    
     $(document).ready(function(){
       $(".name").css("opacity", 0);
       $(".subheadingName").css("opacity", 0);
       $('.parallax').parallax();
-    });
 
-    $("#indexImage").load(function(){
-      $(".name").delay(800).animate({opacity: 1}, 1500, "linear").delay(50, function(){
-        $(".subheadingName").delay(150).animate({opacity: 1, top: '0px'}, 1000, "");
-
+      $("#indexImage").load(function(){
+        $(".name").delay(800).animate({opacity: 1}, 1500, "linear").delay(50, function(){
+          $(".subheadingName").delay(150).animate({opacity: 1, top: '0px'}, 1000, "linear");
+        });
       });
     });
+
+
+        
   </script>
 </body>
 </html>
