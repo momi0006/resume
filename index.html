@@ -84,6 +84,9 @@
         <div class="subheadingName">
           Designer. Developer.
         </div>
+        <p class="resume">
+          <a href="#">Download Resume</a>
+        </p>
 
       </div>
       <div class="parallax">
@@ -108,11 +111,15 @@
     $(document).ready(function(){
       $(".name").css("opacity", 0);
       $(".subheadingName").css("opacity", 0);
+      $(".resume").css("opacity", 0);
       $('.parallax').parallax();
 
       $("#indexImage").load(function(){
         $(".name").delay(800).animate({opacity: 1}, 1500, "linear").delay(50, function(){
-          $(".subheadingName").delay(150).animate({opacity: 1, top: '0px'}, 1000, "linear");
+          $(".subheadingName").delay(150).animate({opacity: 1, top: '0px'}, 1000, "linear").delay(50, function(){
+            $(".resume").animate({opacity: 1}, 1000, "linear");
+          });
+
         });
       });
     });

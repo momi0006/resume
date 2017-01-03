@@ -25,6 +25,10 @@ body{
 	height:100vh;
 }
 
+.parallax img{
+	filter: blur(3px) grayscale(40%);
+}
+
 .navi{
 	position: absolute;
 	top: 0;
@@ -42,6 +46,10 @@ body{
 
 .navbar a{
 	color: #ffffff;
+}
+
+li.nav-item a{
+	font-size: 1.5rem;
 }
 
 .nameHeader{
@@ -68,6 +76,24 @@ body{
 	color: #0074d9;
 }
 
+.resume{
+	font-size: 2rem;
+}
+
+.resume a{
+	color: #0074d9;
+	border: 2px solid; 
+	padding: 8px;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.resume a:hover, .resume a:active {
+	background: #0074d9;
+	color: white;
+	border-color: #0074d9;
+
+}
 
 .menuBtn{
 	font-size: 2em;
@@ -132,4 +158,18 @@ body{
     top: 15px;
     right: 35px;
   }
+}
+
+@media (max-width: 767px) {
+	.nameHeader{
+		font-size: 1.9rem;
+	}
+
+	.name{
+		font-size: 3rem;
+	}
+
+	.resume a{
+		font-size: 1.4rem;
+	}
 }
