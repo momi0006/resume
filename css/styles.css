@@ -49,14 +49,14 @@ body{
 	top: 50%;
 	width: 100%;
 	text-align: center;
-    font-size: 2em;
+    font-size: 3.15rem;
 	font-family: 'Montserrat', sans-serif;
 	background: transparent;
 	
 }
 
 .name{
-	font-size: 1.59em;
+	font-size: 5rem;
 	text-transform: uppercase;
 	line-height: 0.4;
 	color: #fff;
@@ -123,4 +123,13 @@ body{
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }
