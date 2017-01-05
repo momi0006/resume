@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Resume">
 <head>
 	<title></title>
   <!-- Compiled and minified CSS -->
@@ -104,8 +104,45 @@
     </div>
   </div>
   <!-- Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD8Pd7bj_d8Tadz4eTmFKNltKgqC16QD6U",
+      authDomain: "resume-bc8af.firebaseapp.com",
+      databaseURL: "https://resume-bc8af.firebaseio.com",
+      storageBucket: "resume-bc8af.appspot.com",
+      messagingSenderId: "187156161581"
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database();
+    database.ref('/Technologies/').once('value').then(function(snapshot){ 
+        console.log(snapshot.val())
+    });
+    /*var storage = firebase.storage();
+    var pathReference = storage.ref('main-image2.jpg');
+    pathReference.getDownloadURL().then(function(url) {
+      // `url` is the download URL for 'images/stars.jpg'
+
+      // Or inserted into an <img> element:
+      var img = document.getElementById('indexImage');
+      img.src = url;
+    }).catch(function(error) {
+      // Handle any errors
+    });*/
+  </script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <!-- Angular Material requires Angular.js Libraries -->
+    
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-touch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.2.0/angularfire.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript">
     
     $(document).ready(function(){

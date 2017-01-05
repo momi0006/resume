@@ -173,3 +173,17 @@ li.nav-item a{
 		font-size: 1.4rem;
 	}
 }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     .nameHeader{
+		opacity: 1;
+	}
+
+	.name{
+		opacity: 1;
+	}
+
+	.resume{
+		opacity: 1;
+	}
+}
