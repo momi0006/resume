@@ -45,63 +45,33 @@
 	</style>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="parallax-container">
-      <nav class="navi">
-        <!-- <button class="navbar-toggler hidden-lg-up" type="button"  data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button> -->
-        <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-          <ul class="nav navbar-nav float-xs-right">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">ABOUT</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">RESUME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">CONTACT</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-          <a href="#">HOME</a>
-          <a href="#">ABOUT</a>
-          <a href="#">RESUME</a>
-          <a href="#">CONTACT</a>
-        </div>
-      </div>
-      <span style="" class="menuBtn hidden-lg-up" onclick="openNav()"><i class="material-icons">&#xE5D2;</i></span>
-      <div class="vertical-center text-xs-center nameHeader">
-        
-        <div class="name">
-          Alif Momin
-        </div>
-        <div class="subheadingName">
-          Designer. Developer.
-        </div>
-        <p class="resume">
-          <a href="#">Download Resume</a>
-        </p>
-
-      </div>
-      <div class="parallax">
-        <img src="img/main-image2.jpg" id="indexImage">
-      </div>
+  <nav class="navi">
+    <!-- <button class="navbar-toggler hidden-lg-up" type="button"  data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button> -->
+    <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+      <ul class="nav navbar-nav float-xs-right">
+        <li class="nav-item">
+          <a class="nav-link" href="#!/about">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/resume">RESUME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/contact">CONTACT</a>
+        </li>
+      </ul>
     </div>
-    <div class="section white">
-      <div class="row container">
-        <h2 class="header">Parallax</h2>
-        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-      </div>
+  </nav>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="#!/about">ABOUT</a>
+      <a href="#!/resume">RESUME</a>
+      <a href="#!/contact">CONTACT</a>
     </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="img/main-image1.jpg"></div>
-    </div>
+  </div>
+  <span style="" class="menuBtn hidden-lg-up" onclick="openNav()"><i class="material-icons">&#xE5D2;</i></span>
+  <div class="container-fluid" ng-view>
+    
   </div>
   <!-- Scripts -->
   <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
@@ -115,14 +85,35 @@
       messagingSenderId: "187156161581"
     };
     firebase.initializeApp(config);
-    var database = firebase.database();
-    database.ref('/Technologies/').once('value').then(function(snapshot){ 
-        console.log(snapshot.val())
-    });
+    /*var database = firebase.database();
+    database.ref('/Technologies/').push({
+      name: "PHP",
+      timeStamp:  firebase.database.ServerValue.TIMESTAMP
+    });*/
     /*var storage = firebase.storage();
     var pathReference = storage.ref('main-image2.jpg');
     pathReference.getDownloadURL().then(function(url) {
       // `url` is the download URL for 'images/stars.jpg'
+
+
+// `url` is the download URL for 'images/stars.jpg'
+
+      // This can be downloaded directly:
+      var xhr = new XMLHttpRequest();
+      xhr.responseType = 'blob';
+      xhr.onload = function(event) {
+        var blob = xhr.response;
+      };
+      xhr.open('GET', url);
+      xhr.send();
+
+      // Or inserted into an <img> element:
+      var img = document.getElementById('myimg');
+      img.src = url;
+    }).catch(function(error) {
+      // Handle any errors
+    });
+
 
       // Or inserted into an <img> element:
       var img = document.getElementById('indexImage');
@@ -142,27 +133,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-touch.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.2.0/angularfire.min.js"></script>
+
+  <!-- Controllers -->
+
   <script type="text/javascript" src="js/app.js"></script>
-  <script type="text/javascript">
-    
-    $(document).ready(function(){
-      $(".name").css("opacity", 0);
-      $(".subheadingName").css("opacity", 0);
-      $(".resume").css("opacity", 0);
-      $('.parallax').parallax();
-
-      $("#indexImage").load(function(){
-        $(".name").delay(800).animate({opacity: 1}, 1500, "linear").delay(50, function(){
-          $(".subheadingName").delay(150).animate({opacity: 1, top: '0px'}, 1000, "linear").delay(50, function(){
-            $(".resume").animate({opacity: 1}, 1000, "linear");
-          });
-
-        });
-      });
-    });
-
-
-        
-  </script>
+  <script type="text/javascript" src="js/controllers/AboutController.js"></script>
+  
 </body>
 </html>
