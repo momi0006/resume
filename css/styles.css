@@ -153,6 +153,17 @@ li.nav-item a{
 	transform: translateY(-50%);
 }
 
+.footer{
+	height: 250px;
+}
+
+.footerNav{
+	text-align: center;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {

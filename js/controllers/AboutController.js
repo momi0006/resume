@@ -23,22 +23,10 @@ app.controller('AboutCtrl', function($scope, $http, $firebaseObject){
 	  // Handle any errors
 	});*/
   
-  var database = firebase.database().ref('/Technologies/');
-  database.on('value', function(snap){
-    this.techUrl = [];
-    for(var key in snap.val()){
-      var technology = snap.val()[key].name;
-      firebase.storage().ref('/Technologies/'+ technology +'.png').getDownloadURL().then(function(url){
-        
-
-        // Or inserted into an <img> element:
-        
-      });
-    }
-  });
+  $scope.loading = true;
   $firebaseObject(firebase.database().ref('/Technologies/')).$loaded().then(function(data){
     data.$bindTo($scope, "data");
-
+    $scope.loading = false;
   });
 
 

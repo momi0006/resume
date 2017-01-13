@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html ng-app="Resume">
 <head>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-90341310-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 	<title></title>
   <!-- Compiled and minified CSS -->
   
@@ -73,6 +83,64 @@
   <div class="container-fluid" ng-view>
     
   </div>
+  
+  <footer>
+    <div class="parallax-container footer">
+      <!-- <div class="footerNav vertical-center">
+        <div class="row">
+          <div class="col-sm-12 col-md-4"><a href="#">About</a></div>
+          <div class="col-sm-12 col-md-4">Resume</div>
+          <div class="col-sm-12 col-md-4">Contact</div>
+        </div>
+      </div> -->
+
+      <div class="container vertical-center">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 space col-centered">
+              <div class="row">
+                  <div class="col-xs-12">
+                      <b class="footerHeading">About Zee Overseas</b>
+                  </div>
+                  <div class="col-xs-12">
+                      <a href="#/about_us">About us</a>
+                  </div>
+                  <div class="col-xs-12">
+                      <a href="#/contact">Contact us</a>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col-xs-12 col-sm-6 space">
+              <div class="row">
+                  <div class="col-xs-12">
+                      <b class="footerHeading">Services</b>
+                  </div>
+                  <div class="col-xs-12">
+                      <a href="#/services/USA">USA</a>
+                  </div>
+                  <div class="col-xs-12">
+                      <a href="#/services/Canada">Canada</a>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+      <div class="row">
+          <div class="col-xs-12 col-sm-4 pull-sm-right">
+              <label>Follow us on <i class="fa fa-facebook-square fa-lg"></i>&nbsp;&nbsp;<a href="https://twitter.com/zee_overseas" target="_blank"><i class="fa fa-twitter-square fa-lg"></i></a>&nbsp;&nbsp;<i class="fa fa-google-plus-square fa-lg"></i></label>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+              Copyright &copy; 2016. Alif Momin | All rights reserved.
+          </div>
+      </div>
+    </div>
+
+      <div class="parallax">
+        <img src="img/main-image1.jpg">
+      </div>
+    </div>
+  </footer>
+  
   <!-- Scripts -->
   <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
   <script>
