@@ -1,7 +1,14 @@
-var app = angular.module('Resume',['ngRoute', 'ngAnimate', 'firebase']);
+var app = angular.module('Resume',['ngRoute', 'ngAnimate', 'firebase', 'angular-google-analytics']);
+
+app.config(['AnalyticsProvider', function (AnalyticsProvider) {
+   // Add configuration code as desired
+   AnalyticsProvider.setAccount('UA-90341310-1');  //UU-XXXXXXX-X should be your tracking code
+}]).run(['Analytics', function(Analytics) { }]);
+
 app.config(['$compileProvider', function ($compileProvider) {
     $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|local|data|chrome-extension):/);
 }]);
+
 app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
@@ -25,4 +32,3 @@ app.config(['$routeProvider',
         redirectTo: '/about'
       });
   }]);
-

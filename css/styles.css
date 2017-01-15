@@ -22,6 +22,7 @@ body{
 }
 
 .parallax-container{
+	min-height: 500px;
 	height:100vh;
 }
 
@@ -154,15 +155,19 @@ li.nav-item a{
 }
 
 .footer{
+	min-height: 250px;
 	height: 250px;
 }
 
 .footerNav{
-	text-align: center;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
+	text-decoration: none;
+	color: white;
+	font-size: 1.75rem;
 }
+.footerNav:hover, .footerNav:active, .footerNav:visited{
+	text-decoration: none;
+	font-weight: bold;
+} 
 
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
