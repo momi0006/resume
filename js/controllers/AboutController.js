@@ -26,6 +26,11 @@ app.controller('AboutCtrl', function($scope, $http, $firebaseObject){
   $scope.loading = true;
   $firebaseObject(firebase.database().ref('/Technologies/')).$loaded().then(function(data){
     data.$bindTo($scope, "data");
+    
+  });
+
+  $firebaseObject(firebase.database().ref('/Education/')).$loaded().then(function(data){
+    data.$bindTo($scope, "eduDetails");
     $scope.loading = false;
   });
 

@@ -15,6 +15,9 @@ body{
 	-webkit-perspective: 1px;
 	perspective: 1px;*/
 }
+a, a:hover, a:link, a:visited, a:active{
+	text-decoration: none;
+}
 
 .container-fluid{
 	padding-left: 0;
@@ -27,7 +30,8 @@ body{
 }
 
 .parallax img{
-	filter: blur(3px) grayscale(40%);
+	display: block;
+	filter: blur(5px) grayscale(40%);
 }
 
 .navi{
@@ -154,20 +158,140 @@ li.nav-item a{
 	transform: translateY(-50%);
 }
 
+.h1Title{
+	margin-bottom: 2rem;
+	text-decoration: underline;
+}
+
 .footer{
+	color: #ffffff;
 	min-height: 250px;
-	height: 250px;
+	height: 300px;
 }
 
 .footerNav{
 	text-decoration: none;
 	color: white;
-	font-size: 1.75rem;
+	font-size: 2em;
 }
 .footerNav:hover, .footerNav:active, .footerNav:visited{
 	text-decoration: none;
 	font-weight: bold;
-} 
+}
+
+.general{
+	-webkit-transition: -webkit-transform .2s ease-in-out;
+    -ms-transition: -ms-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+}
+.general:hover{
+	transform: scale(1.2);
+	transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+}
+
+.facebook{
+	color: #3b5998;
+	transition: 0.4s;
+}
+.facebook:hover{
+	color: #3b5998;
+}
+.twitter{
+	color: #00aced;
+	transition: 0.4s;
+}
+.twitter:hover{
+	color: #00aced;
+}
+.google-plus{
+	color: #d34836;
+	transition: 0.4s;
+}
+.google-plus:hover{
+	color: #d34836;
+}
+.linkedin{
+	color: #4875B4;
+	transition: 0.4s;
+}
+.linkedin:hover{
+	color: #4875B4;
+}
+
+.socialMedia label{
+	font-size: 2em;
+	color: #ffffff;
+}
+
+.socialMedia a{
+	color: inherit;
+}
+
+.educationPara{
+	margin-bottom: 0rem;
+}
+/*
+.fa-facebook-square{
+	color: #3b5998;
+}
+
+.fa-twitter-square{
+	color: #00aced;
+}
+
+.fa-google-plus-square{
+	color: #d34836;
+}
+
+.twitter .fa-square-o{
+	color: #00aced;
+}
+
+.footerSocialIcons{
+	border-radius: 50%;
+    padding: 6px;
+    
+}
+
+.fa-twitter{
+	color: #00aced;
+    border: 4px solid #00aced;
+    transition: 0.2s;
+}
+
+.fa-facebook{
+	color: #3b5998;
+    border: 4px solid #3b5998;
+    transition: 0.2s;
+}
+
+.fa-google-plus{
+	color: #d34836;
+    border: 4px solid #d34836;
+    transition: 0.2s;
+}
+
+.fa-twitter:hover{
+	color: #ffffff;
+	border: 4px solid #00aced;
+	background: #00aced;
+}
+
+.fa-facebook:hover{
+	color: #ffffff;
+	border: 4px solid #3b5998;
+	background: #3b5998;
+}
+
+.fa-google-plus:hover{
+	color: #ffffff;
+	border: 4px solid #d34836;
+	background: #d34836;
+}
+*/
+
 
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
