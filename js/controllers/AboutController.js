@@ -1,4 +1,4 @@
-app.controller('AboutCtrl', function($scope, $http, $firebaseObject){
+app.controller('AboutCtrl', function($scope, $http, $firebaseObject, $firebaseArray){
 	/*var storage = firebase.storage();
 	var pathReference = storage.ref('main-image2.jpg');
 	pathReference.getDownloadURL().then(function(url) {
@@ -31,10 +31,16 @@ app.controller('AboutCtrl', function($scope, $http, $firebaseObject){
 
   $firebaseObject(firebase.database().ref('/Education/')).$loaded().then(function(data){
     data.$bindTo($scope, "eduDetails");
+    
+  });
+
+  $firebaseArray(firebase.database().ref('/Projects/')).$loaded().then(function(data){
+    // data.$bindTo($scope, "projectDetails");
+    $scope.projectDetails = data;
     $scope.loading = false;
   });
 
-
+  
   /*firebase.storage().ref('/Technologies/JavaScript.png').getDownloadURL().then(function(url){
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'blob';

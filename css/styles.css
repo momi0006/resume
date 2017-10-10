@@ -5,6 +5,32 @@
 	box-sizing: border-box;
 }
 
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    outline: none; /* Remove outline */
+    background-color: transparent; /* Set a background color */
+    color: #0074d9; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 8px 16px; /* Some padding */
+	border-radius: 50%; /* Rounded corners */
+	border: 2px solid #0074d9;
+}
+
+
+i.up{
+	border: solid #0074d9;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+
 body{
 	overflow-x: hidden;
 	/*height: 100vh;
@@ -33,6 +59,7 @@ a, a:hover, a:link, a:visited, a:active{
 
 .parallax img{
 	display: block;
+	-webkit-filter: blur(5px) grayscale(40%);
 	filter: blur(5px) grayscale(40%);
 }
 
@@ -88,6 +115,18 @@ li.nav-item a{
 	font-size: 2rem;
 }
 
+label.visitWeb{
+	padding: 1rem;
+}
+
+.visitWeb a{
+	color: #0074d9;
+	font-size: 1.5rem;
+    border: 2px solid;
+    padding: 0px 5px;
+    text-decoration: none;
+}
+
 .resume a{
 	color: #0074d9;
 	border: 2px solid; 
@@ -96,11 +135,10 @@ li.nav-item a{
 	transition: 0.3s;
 }
 
-.resume a:hover, .resume a:active {
+.resume a:hover, .resume a:active, .visitWeb a:hover, .visitWeb a:active {
 	background: #0074d9;
 	color: white;
 	border-color: #0074d9;
-
 }
 
 .menuBtn{
@@ -165,9 +203,6 @@ li.nav-item a{
 	text-decoration: underline;
 }
 
-.eduDetailText{
-	text-align: left;
-}
 
 .footer{
 	color: #ffffff;
@@ -180,8 +215,9 @@ li.nav-item a{
 	color: white;
 	font-size: 2em;
 }
-.footerNav:hover, .footerNav:active, .footerNav:visited{
+.footerNav:hover, .footerNav:active, .footerNav:focus{
 	text-decoration: none;
+	color: tomato;
 	font-weight: bold;
 }
 
@@ -238,6 +274,14 @@ li.nav-item a{
 .educationPara{
 	margin-bottom: 0rem;
 }
+
+.projectDesc{
+	display: block;
+    unicode-bidi: embed;
+    white-space: pre-wrap;
+}
+
+
 /*
 .fa-facebook-square{
 	color: #3b5998;
@@ -325,13 +369,14 @@ li.nav-item a{
 		font-size: 0.8rem;
 	}
 
-	.eduDetailText{
-		text-align: center;
+	.img-fluid{
+		max-width: 75%;
 	}
+
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-     .nameHeader{
+    .nameHeader{
 		opacity: 1;
 	}
 
@@ -342,4 +387,6 @@ li.nav-item a{
 	.resume{
 		opacity: 1;
 	}
+
+	
 }

@@ -1,5 +1,5 @@
 <div ng-controller="AboutCtrl">
-  <div class="parallax-container">    
+  <div class="parallax-container" id="about">    
     <div class="vertical-center text-xs-center nameHeader">
       
       <div class="name">
@@ -9,7 +9,7 @@
         Designer. Developer.
       </div>
       <p class="resume">
-        <a href="#">Download Resume</a>
+        <a href="https://firebasestorage.googleapis.com/v0/b/resume-bc8af.appspot.com/o/Resume%2FAlif%20Momin%20resume_updated.docx?alt=media&token=1cd96141-842f-4f4b-8adf-5ed0c625fb03">Download Resume</a>
       </p>
 
     </div>
@@ -33,12 +33,12 @@
         </div>
       </div>
 
-      <div class="row text-xs-center" ng-show="!loading">
-        <h1 ng-bind="data.$id" style="margin-bottom: 2rem;"></h1>
+      <div class="row text-xs-center" id="technologies" ng-show="!loading">
+        <h1 ng-bind="data.$id" style="margin-bottom: 2rem;" class="h1Title"></h1>
         <!-- <li ng-repeat="x in data">
           {{x.name}} - <img ng-src="{{x.url}}">
         </li> -->
-        <div class="col-xs-6 col-md-2" ng-repeat="x in data">
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="x in data">
           <img ng-src="{{x.url}}" class="img-fluid" width="100px" height="100px" />
           <p ng-bind="x.name"></p>
         </div>
@@ -46,14 +46,14 @@
 
       <hr ng-show="!loading" />
 
-      <div class="row text-xs-center" ng-show="!loading">
-        <h1 ng-bind="eduDetails.$id" style="margin-bottom: 2rem;"></h1>
+      <div class="row text-xs-center" id="education" ng-show="!loading">
+        <h1 ng-bind="eduDetails.$id" class="text-xs-center h1Title" style="margin-bottom: 2rem;"></h1>
         <div class="col-xs-12" ng-repeat="eduDetail in eduDetails">
           <div class="row">
             <div class="col-sm-12 col-md-4">
               <img class="img-fluid" ng-src="{{eduDetail.imageUrl}}">
             </div>
-             <div class="col-sm-12 col-md-8" class="eduDetailText">
+             <div class="col-sm-12 col-md-8">
               <h4 ng-bind="eduDetail.college"></h4>
               <p class="educationPara">{{eduDetail.degree}} in {{eduDetail.program}}</p>
               <p class="educationPara">{{eduDetail.length}}</p>
@@ -62,25 +62,63 @@
         </div>
       </div>
 
+      <hr ng-show="!loading" />
+
+      <div class="row text-xs-left" id="projects" ng-show="!loading">
+        <h1 class="text-xs-center h1Title" style="margin-bottom: 2rem;">Projects</h1>
+        <div class="col-xs-12" ng-repeat="projectDetail in projectDetails | orderBy:'-id'">
+          <div class="row">
+            
+            <div class="col-sm-12 col-md-12">
+              <h4 ng-bind="projectDetail.name"></h4>
+              <p class="educationPara projectDesc" ng-bind="projectDetail.desc"></p>
+            </div>
+            <div class="col-sm-12">
+              <label class="visitWeb" ng-if="projectDetail.url">
+                <a ng-href="{{projectDetail.url}}" target="_blank">Visit Website</a>
+              </label>
+              <label class="visitWeb" ng-if="projectDetail.apkUrl">
+                <a ng-href="{{projectDetail.apkUrl}}" target="_blank">Download .APK for Android</a>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-  
+  <button ng-click="gotoStep('about')" id="myBtn" title="Go to top"><i class="up"></i></button>
 </div>
 <script type="text/javascript">
-    
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+      } else {
+          document.getElementById("myBtn").style.display = "none";
+      }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+      document.documentElement.scrollTop = 0; // For IE and Firefox
+  }
+
   $(document).ready(function(){
     $(".name").css("opacity", 0);
     $(".subheadingName").css("opacity", 0);
     $(".resume").css("opacity", 0);
     $('.parallax').parallax();
 
-    $("#indexImage").load(function(){
+    //$("#indexImage").load(function(){
       $(".name").delay(800).animate({opacity: 1}, 1500, "linear").delay(50, function(){
         $(".subheadingName").delay(150).animate({opacity: 1, top: '0px'}, 1000, "linear").delay(50, function(){
           $(".resume").animate({opacity: 1}, 1000, "linear");
         });
 
       });
-    });
+    //});
   });
 </script>
