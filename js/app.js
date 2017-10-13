@@ -86,7 +86,7 @@ app.controller('ScrollCtrl', ['anchorSmoothScroll', '$location', '$scope',
       var newHash = x;
       if ($location.hash() !== newHash) {
 		
-		 $location.hash(x);
+		 //$location.hash(x);
 		 anchorSmoothScroll.scrollTo(x);
       } else {
         //$anchorScroll();
@@ -97,6 +97,14 @@ app.controller('ScrollCtrl', ['anchorSmoothScroll', '$location', '$scope',
     $scope.closeNav = function () {
       document.getElementById("myNav").style.width = "0%";
     }
+
+    $scope.navbarMenu = [
+        {name: 'About', url: 'about'}, 
+        {name: 'Technologies', url: 'technologies'},
+        {name: 'Education', url: 'education'},
+        {name: 'Projects', url: 'projects'}, 
+        {name: 'Contact', url: 'contact'}
+    ];
   }
 
   
