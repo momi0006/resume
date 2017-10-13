@@ -63,6 +63,11 @@ a, a:hover, a:link, a:visited, a:active{
 	filter: blur(5px) grayscale(40%);
 }
 
+#contactPage{
+	-webkit-filter: blur(0px) grayscale(40%);
+	filter: blur(0px) grayscale(40%);
+}
+
 .navi{
 	z-index: 1;
 	position: absolute;
@@ -207,13 +212,19 @@ label.visitWeb{
 .footer{
 	color: #ffffff;
 	min-height: 250px;
-	height: 300px;
+	background-color: black;
+	z-index: 0;
 }
 
+#greet{
+	color: #ffffff;
+	font-size: 8rem;
+	margin: 0 6rem;
+}
 .footerNav{
 	text-decoration: none;
 	color: white;
-	font-size: 2em;
+	font-size: 1.5rem;
 }
 .footerNav:hover, .footerNav:active, .footerNav:focus{
 	text-decoration: none;
@@ -279,6 +290,10 @@ label.visitWeb{
 	display: block;
     unicode-bidi: embed;
     white-space: pre-wrap;
+}
+
+.email{
+	font-size: 2rem;
 }
 
 
@@ -352,6 +367,7 @@ label.visitWeb{
   }
 }
 
+/* For extra-small and small*/
 @media (max-width: 767px) {
 	.nameHeader{
 		font-size: 1.9rem;
@@ -373,8 +389,52 @@ label.visitWeb{
 		max-width: 75%;
 	}
 
-}
+	.footer{
+		color: #ffffff;
+		min-height: 250px;
+		height: 100vh;
+	}
 
+	
+
+}
+@media (max-width: 499px) {
+	#contactPage{
+		bottom:20px;
+		left: 70%;
+	}
+	#greet{
+		font-size: 3rem;
+		margin: 0 2.5rem;
+	}
+	.email{
+		font-size: 1.6rem;
+	}
+}
+@media (min-width: 500px) and (max-width: 749px) {
+	#contactPage{
+		left: 70%;
+	}
+	#greet{
+		font-size: 5rem;
+		margin: 0 2.5rem;
+	}
+	.email{
+		font-size: 2.5rem;
+	}
+}
+@media (min-width: 750px) and (max-width: 1100px) {
+	#contactPage{
+		left: 70%;
+	}
+	#greet{
+		font-size: 8rem;
+		margin: 0 2.5rem;
+	}
+	.email{
+		font-size: 2rem;
+	}
+}
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .nameHeader{
 		opacity: 1;

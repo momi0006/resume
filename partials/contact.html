@@ -1,4 +1,21 @@
-<div ng-controller="ContactCtrl">
-    <div>{{about.$id}}</div>
-	<div>{{about.name}}</div>
+<div ng-controller="ContactCtrl" id="fullpage">
+    <div class="section" id="section1">
+        <div class="fp-bg"></div>
+        Slide 1.1
+    </div>
+    <div class="section" id="section2">
+        <div class="slide" id="slide2-1">
+            <div class="fp-bg"></div>
+            Slide 2.1
+        </div>
+        <div class="slide" id="slide2-2">
+            <div class="fp-bg"></div>
+            Slide 2.2
+        </div>
+    </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage();
+    });
+</script>
